@@ -1,0 +1,13 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="00-example-filter.js"></script>
+</head>
+<body>
+    <div ng-app="miApp" ng-controller="miControlador">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" ng-model="nombre">
+        <h1>¡Hola {{nombre | uppercase}}!</h1>
+    </div>
+</body>
+</html>

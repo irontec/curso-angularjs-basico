@@ -1,0 +1,15 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="00-example-click.js"></script>
+</head>
+<body>
+    <div ng-app="miApp">
+        <ul ng-controller="miControlador">
+            <li ng-repeat="contacto in contactos">
+                {{contacto.nombre}} ({{contacto.telefono}})
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

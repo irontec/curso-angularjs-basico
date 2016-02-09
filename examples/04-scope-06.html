@@ -1,0 +1,19 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="04-scope-06.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="04-scope-06.js"></script>
+</head>
+<body ng-app="scopeExample">
+    <div class="show-scope-demo">
+      <div ng-controller="GreetController">
+        Hello {{name}}!
+      </div>
+      <div ng-controller="ListController">
+        <ol>
+          <li ng-repeat="name in names">{{name}} from {{department}}</li>
+        </ol>
+      </div>
+    </div>
+</body>
+</html>

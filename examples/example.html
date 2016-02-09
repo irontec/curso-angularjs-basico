@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="example.css">
+
+    <title>AngularJS</title>
+</head>
+<body ng-app="example">
+    <div class="container">
+        <div class="jumbotron">
+        <h1>Lista de tareas</h1>
+        <p>Esto es una lista de tareas creada con AngularJS</p>
+      </div>
+
+        <ul ng-controller="ListCtrl">
+            <li ng-repeat="task in tasks" ng-class="{'removed': task.removed}">
+                {{task.name}}
+                <span class="glyphicon glyphicon-remove" ng-click="removeTask(task)" ng-if="!task.removed"></span>
+            </li>
+        </ul>
+        <div ng-controller="CreateCtrl">
+            <input type="text" ng-model="newTask">
+            <button type="button" class="btn btn-primary" ng-click="addTask()" ng-disabled="!newTask">Añadir</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="example.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "AngularJS",
+    "packageVersion": "0.0.1",
+    "revealTheme": "moon",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "MikelEiza",
+    "githubRepository": "curso-angularjs-basico"
+  }
+}

@@ -1,0 +1,14 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="02-example.js"></script>
+</head>
+<body>
+    <div ng-app="miApp" ng-controller="miControlador">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" ng-model="nombre">
+        <h1>¡Hola {{nombre}}!</h1>
+        <button ng-click="cambiarNombre()">Cambiar nombre</button>
+    </div>
+</body>
+</html>
